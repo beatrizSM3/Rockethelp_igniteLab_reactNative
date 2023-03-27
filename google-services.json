@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "354983807877",
+    "project_id": "rockethelp-ignitelab-dcba9",
+    "storage_bucket": "rockethelp-ignitelab-dcba9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:354983807877:android:f43d69ee4140d420e952ec",
+        "android_client_info": {
+          "package_name": "com.rockethelp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "354983807877-0eu1stc47ii6qg9tkv0vere8ftsv8t14.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCEQ4PIZkJIzmB0C_wRrOMacix7NBsayYY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "354983807877-0eu1stc47ii6qg9tkv0vere8ftsv8t14.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

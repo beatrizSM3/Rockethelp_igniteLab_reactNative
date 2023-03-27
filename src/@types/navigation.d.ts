@@ -4,6 +4,7 @@ export declare global {
             home: undefined;
             new: undefined;
             details: { orderId: string };
+            singin: undefined;
 
         }
     }

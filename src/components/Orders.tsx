@@ -7,7 +7,7 @@ export type OrderProps = {
     patrimony: string;
     description: string;
     when: string;
-    status: 'open' | 'closed';
+    status: boolean;
 
 }
 
@@ -19,7 +19,7 @@ export function Order({data, ...rest}: OrderPropsInternal){
 
     const {colors} = useTheme()
 
-    const statusColor = data.status === 'open' ? colors.secondary[700] : colors.green[300]
+    const statusColor = data.status ? colors.secondary[700] : colors.green[300]
 
     return (
         <Pressable {...rest}>
@@ -44,7 +44,7 @@ export function Order({data, ...rest}: OrderPropsInternal){
                 </VStack>
                 <Circle bg="gray.500" h={12} w={12} mr={5}>
                     {
-                        data.status=== 'closed'? <CircleWavyCheck size={24} color={statusColor} /> : <Hourglass size={24} color={statusColor}/>
+                        !data.status ? <CircleWavyCheck size={24} color={statusColor} /> : <Hourglass size={24} color={statusColor}/>
                     }
                 </Circle>
             
