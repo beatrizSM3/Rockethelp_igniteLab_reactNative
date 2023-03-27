@@ -68,6 +68,7 @@ export function Details() {
 
         }
 
+        setIsLoading(true)
         const ordersRef = firebase.firestore().collection<OrderDTO>( 'orders')
 
         ordersRef.doc(orderId).update({
@@ -81,10 +82,13 @@ export function Details() {
             //     closed: firestoreDateFormat(new Date())
             // })
             setSolution('')
+            setIsLoading(false)
             navigation.goBack()
         }).catch(err => {
             console.log(err)
         })
+
+       
     }
 
     useEffect(() => {
@@ -144,13 +148,14 @@ export function Details() {
                 title="equipamento"
                 description={`Patrimônio: ${order.patrimony}`}
                 icon={DesktopTower}
-                footer={order.when}
+              
                 />
 
 <CardDetails 
                 title="descrição"
                 description={order.description}
                 icon={Clipboard}
+                footer={`Registrado em ${order.when}`}
                
                 />
 
@@ -177,7 +182,7 @@ export function Details() {
             </ScrollView>
 
             {
-                order.status && <Button title="Encerrar solicitação" m={5} onPress={handleOrderClose}></Button>
+                order.status && <Button title="Encerrar solicitação" m={5} onPress={handleOrderClose} isLoading={isLoading}></Button>
             }
 
         </VStack>

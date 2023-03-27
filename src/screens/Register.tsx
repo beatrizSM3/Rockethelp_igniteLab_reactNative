@@ -37,7 +37,7 @@ export function Register() {
         .add({
             patrimony,
             description,
-            status: false,
+            status: true,
             created_at: firestore.FieldValue.serverTimestamp(),
 
         })
